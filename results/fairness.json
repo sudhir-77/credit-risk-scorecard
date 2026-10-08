@@ -1,0 +1,57 @@
+{
+  "cutoff": 0.243243,
+  "flags": [],
+  "reference": {
+    "sex": "female",
+    "age_band": "30-39"
+  },
+  "sex": {
+    "female": {
+      "n": 3598,
+      "n_good": 2832,
+      "approval_rate": 0.7270705947748749,
+      "tpr_good": 0.8177966101694916,
+      "air": 1.0,
+      "equal_opportunity_difference": 0.0,
+      "is_reference": true
+    },
+    "male": {
+      "n": 2402,
+      "n_good": 1841,
+      "approval_rate": 0.7039966694421316,
+      "tpr_good": 0.8001086366105378,
+      "air": 0.9682645323596291,
+      "equal_opportunity_difference": -0.017687973558953796,
+      "is_reference": false
+    }
+  },
+  "age_band": {
+    "<30": {
+      "n": 1912,
+      "n_good": 1485,
+      "approval_rate": 0.6841004184100419,
+      "tpr_good": 0.7804713804713804,
+      "air": 0.9191031293797507,
+      "equal_opportunity_difference": -0.05162031007303214,
+      "is_reference": false
+    },
+    "30-39": {
+      "n": 2198,
+      "n_good": 1745,
+      "approval_rate": 0.7443130118289354,
+      "tpr_good": 0.8320916905444126,
+      "air": 1.0,
+      "equal_opportunity_difference": 0.0,
+      "is_reference": true
+    },
+    "40+": {
+      "n": 1890,
+      "n_good": 1443,
+      "approval_rate": 0.7211640211640211,
+      "tpr_good": 0.8163548163548163,
+      "air": 0.9688988499501946,
+      "equal_opportunity_difference": -0.01573687418959624,
+      "is_reference": false
+    }
+  }
+}

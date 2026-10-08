@@ -1,0 +1,143 @@
+{
+  "project": "credit-risk-scorecard",
+  "success_criteria": [
+    {
+      "name": "Test AUROC of the champion model",
+      "value": 0.7807538407478322,
+      "op": ">=",
+      "threshold": 0.77,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Champion vs. scorecard baseline",
+      "value": 0.01959355085597314,
+      "op": ">=",
+      "threshold": 0.01,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "KS statistic of the champion",
+      "value": 0.4233950877195246,
+      "op": ">=",
+      "threshold": 0.4,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Expected calibration error (10 bins) after calibration",
+      "value": 0.01233527333333334,
+      "op": "<=",
+      "threshold": 0.03,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Reason codes",
+      "value": 1.0,
+      "op": ">=",
+      "threshold": 1.0,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Fairness reporting",
+      "value": 1.0,
+      "op": ">=",
+      "threshold": 1.0,
+      "threshold_high": null,
+      "passed": true
+    },
+    {
+      "name": "Test coverage of src/",
+      "value": 89.46322067594433,
+      "op": ">=",
+      "threshold": 75.0,
+      "threshold_high": null,
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "champion_name": "monotonic_lightgbm",
+    "cutoff": 0.243243,
+    "n_rows": 30000,
+    "n_features": 25,
+    "quick": false,
+    "test": {
+      "champion": {
+        "auroc": 0.7807538407478322,
+        "ks": 0.4233950877195246,
+        "gini": 0.5615076814956643,
+        "brier": 0.135346578349037,
+        "ece": 0.01233527333333334
+      },
+      "monotonic_lightgbm": {
+        "auroc": 0.7807538407478322,
+        "ks": 0.4233950877195246,
+        "gini": 0.5615076814956643,
+        "brier": 0.135346578349037,
+        "ece": 0.01233527333333334
+      },
+      "scorecard": {
+        "auroc": 0.761160289891859,
+        "ks": 0.39804253168525244,
+        "gini": 0.522320579783718,
+        "brier": 0.13917884017916834,
+        "ece": 0.011313931333333336
+      }
+    },
+    "validation": {
+      "monotonic_lightgbm": {
+        "auroc": 0.7867003135426123
+      },
+      "scorecard": {
+        "auroc": 0.7729912300633228
+      }
+    },
+    "fairness": {
+      "air_min": 0.9191031293797507,
+      "air_max": 1.0,
+      "n_flags": 0
+    },
+    "psi": {
+      "max": 0.0023621879686549115,
+      "mean": 0.0010372320566627577
+    },
+    "reason_codes": {
+      "n_declined": 1693,
+      "n_with_four": 1693,
+      "all_signs_agree": 1.0,
+      "share_positive_shap": 0.9995569994093325
+    },
+    "gbm_best_iteration": 98,
+    "scorecard_C": 1.0
+  },
+  "baseline": {
+    "name": "woe_logistic_scorecard",
+    "test_auroc": 0.761160289891859,
+    "test_ks": 0.39804253168525244,
+    "test_gini": 0.522320579783718,
+    "test_brier": 0.13917884017916834,
+    "test_ece": 0.011313931333333336
+  },
+  "splits": {
+    "default_of_credit_card_clients": {
+      "train": 18000,
+      "val": 6000,
+      "test": 6000
+    }
+  },
+  "seeds": [
+    42
+  ],
+  "hardware": {
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "ram_gb": 15.73,
+    "gpu": null,
+    "python": "3.12.10",
+    "os": "Windows-11-10.0.26200-SP0",
+    "peak_rss_gb": 0.232
+  },
+  "runtime_seconds": 2.5686010999488644
+}
